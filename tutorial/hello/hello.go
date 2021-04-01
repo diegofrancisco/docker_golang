@@ -5,11 +5,16 @@ import(
  	"rsc.io/quote"
 	"example.com/greetings"
 	"log"
+	"regexp"
 )
  
 func main(){
 	// Hello World	
 	fmt.Println("Hello , World")
+
+	name := "Diego"
+	want := regexp.MustCompile(`\b`+name+`\b`)
+	fmt.Println("%#v", want)
 
 	// Importing and using a module
 	fmt.Println(quote.Go())
